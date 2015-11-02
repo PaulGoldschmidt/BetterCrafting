@@ -19,8 +19,6 @@ public class BetterCrafting {
         @Mod.Instance
         public static MCMod instance = new MCMod();
 
-        private NewBlocks NewBlock, NewBlock2;
-
         @Mod.EventHandler
         public void preInit (FMLPreInitializationEvent e)
         {
@@ -30,27 +28,12 @@ public class BetterCrafting {
         @Mod.EventHandler
         public  void init(FMLInitializationEvent e) {
             System.out.print("init-Methode wird geladen...");
-            loadBlocks();
+
         }
 
         @Mod.EventHandler
         public  void postInit(FMLPostInitializationEvent e)  {
             System.out.print("postInit-Methode wird geladen...");
-        }
-        private void loadBlocks() {
-            System.out.print("Test");
-
-            //1. BetterBlock NewBlock
-
-            NewBlock = new NewBlocks(Material.ground, "BetterBlock", 1.0F, 1.0F, 1.0F, "pickaxe", 0);
-            GameRegistry.registerBlock(NewBlock, NewBlock.getUnlocalizedName().substring(5));
-            NewBlock.setCreativeTab(CreativeTabs.tabBlock);
-
-            //1. BetterBlock NewBlock
-            NewBlock2 = new NewBlocks(Material.water, "PAPA", 1.0F, 1.0F, 1.0F, "pickaxe", 0);
-            GameRegistry.registerBlock(NewBlock2, NewBlock.getUnlocalizedName().substring(5));
-            NewBlock2.setCreativeTab(CreativeTabs.tabBlock);
-
         }
     }
 }
