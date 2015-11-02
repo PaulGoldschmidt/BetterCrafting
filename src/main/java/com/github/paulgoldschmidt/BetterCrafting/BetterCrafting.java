@@ -38,6 +38,7 @@ public class BetterCrafting {
             System.out.print("postInit-Methode wird geladen...");
         }
         private void loadBlocks() {
+            System.out.print("Test");
 
             //1. BetterBlock NewBlock
 
