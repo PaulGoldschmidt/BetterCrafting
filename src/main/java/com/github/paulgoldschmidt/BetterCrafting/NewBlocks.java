@@ -18,7 +18,7 @@ public class NewBlocks extends Block {
         this.setResistance(resistance);
         this.setLightLevel(lightLevel);
         this.setHarvestLevel(tool, harvestlevel);
-        this.registerTexture("testRAIMAR");
+        this.registerTexture();
     }
 
     private void registerTexture(String unlockName) {

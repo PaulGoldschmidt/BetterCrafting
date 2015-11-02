@@ -19,7 +19,7 @@ public class BetterCrafting {
         @Mod.Instance
         public static MCMod instance = new MCMod();
 
-        private NewBlocks NewBlock;
+        private NewBlocks NewBlock, NewBlock2;
 
         @Mod.EventHandler
         public void preInit (FMLPreInitializationEvent e)
@@ -45,6 +45,11 @@ public class BetterCrafting {
             NewBlock = new NewBlocks(Material.ground, "BetterBlock", 1.0F, 1.0F, 1.0F, "pickaxe", 0);
             GameRegistry.registerBlock(NewBlock, NewBlock.getUnlocalizedName().substring(5));
             NewBlock.setCreativeTab(CreativeTabs.tabBlock);
+
+            //1. BetterBlock NewBlock
+            NewBlock2 = new NewBlocks(Material.water, "PAPA", 1.0F, 1.0F, 1.0F, "pickaxe", 0);
+            GameRegistry.registerBlock(NewBlock2, NewBlock.getUnlocalizedName().substring(5));
+            NewBlock2.setCreativeTab(CreativeTabs.tabBlock);
 
         }
     }
