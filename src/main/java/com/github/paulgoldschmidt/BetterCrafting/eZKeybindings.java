@@ -1,16 +1,23 @@
 //Grundcode V. 1.0 by Paul Goldschmidt
 package com.github.paulgoldschmidt.BetterCrafting;
 
+import java.io.*;
+import net.minecraft.client.settings.KeyBinding;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import org.lwjgl.input.Keyboard;
 
 /**
  * Created by Paul Goldschmidt on 01.11.2015.
  */
-public class BetterCrafting {
+public class eZKeybindings {
 
+    private static void ladeDatei(String datName);
+    public static KeyBinding S1;
+    public static KeyBinding S2;
 
     @Mod(modid = "eZShortcuts²", name = "eZ Shortcuts²", version = "0.10 Alpha")
     public static class MCMod {
@@ -61,10 +68,13 @@ public class BetterCrafting {
 
         private void ModInit() {
             System.out.println("Init Phase loading the main Code.");
-            //YOUR CODE
-            //YOUR CODE
+            //CODE
+
+            S1 = new KeyBinding("S1.lang", Keyboard.KEY_F, "Keybindings²");
+            ClientRegistry.registerKeyBinding(S1);
+            //END OF MAIN CODE
             System.out.println("Init Phase loading successful the Code.");
-            //Last step: The PostInit step load child mods and other Mods.
+
         }
 
         private void ModPostInit() {
