@@ -5,7 +5,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.lwjgl.Sys;
 
 /**
  * Created by Paul Goldschmidt on 01.11.2015.
@@ -13,7 +12,7 @@ import org.lwjgl.Sys;
 public class BetterCrafting {
 
 
-    @Mod(modid = "Better Crafing", name = "Better Crafting", version = "0.001")
+    @Mod(modid = "eZShortcuts²", name = "eZ Shortcuts²", version = "0.10 Alpha")
     public static class MCMod {
         @Mod.Instance
         public static MCMod instance = new MCMod();
